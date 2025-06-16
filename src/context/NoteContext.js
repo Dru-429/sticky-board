@@ -1,7 +1,7 @@
+import { db } from "@/appwrite/database";
+import Spinner from "@/components/icons/Spinner";
 import { createContext } from "react";
 import { useState, useEffect } from "react";
-import { db } from "../appwrite/databases";
-import Spinner from "@/app/components/icons/Spinner";
  
 export const NoteContext = createContext();
  
@@ -26,14 +26,15 @@ const NotesProvider = ({ children }) => {
         <NoteContext.Provider value={contextData}>
             {loading ? (
                 <div
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        height: "100vh",
-                    }}
+                    className="w-screen h-screen flex flex-col items-center justify-center relative"  
                 >
                     <Spinner size="100" />
+                    <div className="absolute bottom-4">
+                        <h1 className="text-2xl font-bold text-zinc-200 mt-4">
+                            Loading Notes...
+                        </h1>
+                        {/* <p className="text-gray-500">Please wait while we fetch your notes.</p> */}
+                    </div>
                 </div>
             ) : (
                 children

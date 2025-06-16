@@ -11,9 +11,15 @@ const Notespage = () => {
     
     return (
         <div>
-            {notes.map((note) => (
+            console.log( notes )
+        {
+            notes.map( (note) => (
                 <NoteCard note={note} key={note.$id} />
-            ))}
+            ))
+        }
+            {/* {notes.map((note) => (
+                <NoteCard note={note} key={note.$id} />
+            ))} */}
 
             <Controls />
         </div>

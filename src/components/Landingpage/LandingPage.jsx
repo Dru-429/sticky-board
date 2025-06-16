@@ -1,10 +1,11 @@
 "use client"
 
-import { BackgroundBeams } from '@/components/ui/background-beams'
-import { Button } from '@/components/ui/button'
 import { easeIn, easeInOut, motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
+import { Button } from '../ui/button'
+import { BackgroundBeams } from '../ui/background-beams'
+
 
 const LandingPage = () => {
   return (
