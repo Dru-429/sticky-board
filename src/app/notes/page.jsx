@@ -1,29 +1,19 @@
 "use client"
 
-import Controls from '@/components/notes/Controls'
-import NoteCard from '@/components/notes/NoteCard'
-import { NoteContext } from '@/context/NoteContext'
-import React, { useContext } from 'react'
+import Notespage from '@/components/notes/NotePage'
+import { Boxes } from '@/components/ui/background-boxes'
+import NotesProvider from '@/context/NoteContext'
+import React from 'react'
 
-const Notespage = () => {
-
-    const { notes } = useContext(NoteContext)
-    
-    return (
-        <div>
-            console.log( notes )
-        {
-            notes.map( (note) => (
-                <NoteCard note={note} key={note.$id} />
-            ))
-        }
-            {/* {notes.map((note) => (
-                <NoteCard note={note} key={note.$id} />
-            ))} */}
-
-            <Controls />
-        </div>
-    )
+const page = () => {
+  return (
+    <div className='w-screen h-screen' id='app'>
+      <NotesProvider>
+        <Boxes />
+        <Notespage />
+      </NotesProvider>
+    </div>
+  )
 }
 
-export default Notespage
+export default page

@@ -7,13 +7,13 @@ import Controls from './Controls'
 
 const Notespage = () => {
 
-    const { notes } = useContext(NoteContext)
+    // const { notes } = useContext(NoteContext)
     
     return (
         <div>
-            {notes.map((note) => (
+            {/* {notes.map((note) => (
                 <NoteCard note={note} key={note.$id} />
-            ))}
+            ))} */}
 
             <Controls />
         </div>
