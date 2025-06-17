@@ -29,7 +29,7 @@ const NotesProvider = ({ children }) => {
                     className="w-screen h-screen flex flex-col items-center justify-center relative"  
                 >
                     <Spinner size="100" />
-                    <div className="absolute bottom-4 right-0">
+                    <div className="absolute bottom-4 right-5">
                         <h1 className="text-2xl font-bold text-zinc-200 mt-4">
                             Loading Notes...
                         </h1>
