@@ -90,7 +90,7 @@ export default function LandingPage() {
           <div className="flex items-center space-x-2">
             <Github className="w-5 h-5 text-[#0D3B66]" /> {/* Github icon */}
             <a
-              href="https://github.com/Dru-429/sticky-notes"
+              href="https://github.com/Dru-429/sticky-board"
               target="_blank" // Opens in a new tab
               rel="noopener noreferrer" // Security best practice for target="_blank"
               className="text-[#0D3B66] font-medium hover:underline"
@@ -131,7 +131,7 @@ export default function LandingPage() {
         </motion.p>
 
         <motion.a
-          href="#features"
+          href="/notes"
           className="mt-8 inline-block bg-[#EE964B] hover:bg-[#F95738] text-white font-medium px-6 py-3 rounded-lg transition"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -186,7 +186,7 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-[#F4D35E] md:py-24 ">
+      <section id="how-it-works" className="bg-[#F4D35E] md:py-24 ">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -239,7 +239,10 @@ export default function LandingPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Built with ❤️ for creative minds
+          Made with vibes ✨ & caffeine 🍵 for the idea junkies
+          <p>
+            Built with 💡, 🔥 and a keyboard smash by Dru
+          </p>
         </motion.h3>
 
         <p className="text-xl text-[#]/70 mb-8">
