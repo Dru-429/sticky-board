@@ -100,10 +100,11 @@ export default function LandingPage() {
           </div>
         </motion.div>
       </nav>
+
       {/* Hero Section */}
       <section className="bg-[#FAF0CA] min-h-screen flex flex-col justify-center items-center px-6 text-center">
         <motion.h1
-          className="text-4xl md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
+          className="pb-5 text-4xl md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -132,7 +133,7 @@ export default function LandingPage() {
 
         <motion.a
           href="/notes"
-          className="mt-8 inline-block bg-[#EE964B] hover:bg-[#F95738] text-white font-medium px-6 py-3 rounded-lg transition"
+          className="mt-8 text-lg font-bold inline-block hover:bg-[#EE964B] bg-[#F95738] text-white px-6 py-3 rounded-lg transition"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.4 }}
@@ -187,7 +188,7 @@ export default function LandingPage() {
 
       {/* How It Works */}
       <section id="how-it-works" className="bg-[#F4D35E] md:py-24 ">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -227,6 +228,15 @@ export default function LandingPage() {
               </motion.div>
             ))}
           </div>
+          <motion.a
+            href="/notes"
+            className="mt-8 inline-block bg-[#0D3B66] hover:bg-[#010202] text-white font-bold text-lg px-6 py-3 rounded-lg transition "
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.4 }}
+          >
+            Start Posting
+          </motion.a>
         </div>{" "}
       </section>
 
@@ -240,7 +250,7 @@ export default function LandingPage() {
           transition={{ duration: 0.6 }}
         >
           Made with vibes ✨ & caffeine 🍵 for the idea junkies
-          <p>
+          <p className="text-[#f95738]">
             Built with 💡, 🔥 and a keyboard smash by Dru
           </p>
         </motion.h3>
@@ -270,7 +280,7 @@ export default function LandingPage() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/your-link"
+            href="https://linkedin.com/in/dhruvsahoo"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
