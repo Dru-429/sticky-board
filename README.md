@@ -1,4 +1,4 @@
-# 🧠 Sticky Board – The Internet’s Community Notice Wall
+# 📝 Sticky Board – The Internet’s Community Notice Wall
 
 Welcome to **Sticky Board** — a modern twist on the good old notice board!  
 Drop anonymous notes, share ideas, shout out cool projects, or just vibe with strangers.  
