@@ -1,6 +1,6 @@
 # 📝 Sticky Board – The Internet’s Community Notice Wall
 
-![image](https://github.com/user-attachments/assets/18af9ea8-1418-47cc-9cfc-ba23dc4f6fbb)
+![image](https://github.com/user-attachments/assets/3b47d3dd-ef14-4b04-88b7-407b7b337536)
 
 Welcome to **Sticky Board** — a modern twist on the good old notice board!  
 Drop anonymous notes, share ideas, shout out cool projects, or just vibe with strangers.  
