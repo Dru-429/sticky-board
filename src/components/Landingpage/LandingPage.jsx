@@ -23,6 +23,32 @@ const steps = [
   },
 ];
 
+const features = [
+  {
+    emoji: "🔒",
+    title: "Anonymous Sharing",
+    description:
+      "Post your thoughts without revealing your identity. Complete privacy guaranteed.",
+  },
+  {
+    emoji: "⏰",
+    title: "Auto-Expire",
+    description:
+      "Notes automatically disappear after 30 days, keeping the board fresh and relevant.",
+  },
+  {
+    emoji: "🎨",
+    title: "Creative Freedom",
+    description:
+      "Express yourself freely with text, emojis, and creative formatting options.",
+  },
+  {
+    emoji: "🌐",
+    title: "Open Community",
+    description:
+      "Join a global community of thinkers, dreamers, and creative minds.",
+  },
+];
 
 export default function LandingPage() {
   return (
@@ -30,7 +56,7 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="bg-[#FAF0CA] min-h-screen flex flex-col justify-center items-center px-6 text-center">
         <motion.h1
-          className="text-4xl md:text-9xl font-bold text-clip tex bg-gradient-to-r from-[#51a4f7] to-[#022f5c] mb-4"
+          className="text-4xl md:text-9xl font-bold text-clip tex bg-gradient-to-b from-[#EE964B] to-[#022f5c] mb-4"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -69,52 +95,46 @@ export default function LandingPage() {
 
       {/* Features Section */}
       <section id="features" className="bg-white py-20 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0D3B66] mb-12">
-            Why Sticky Board?
-          </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10">
-            {[
-              {
-                emoji: "🔒",
-                title: "Anonymous Sharing",
-                desc: "No sign-in. Just drop your note and go.",
-              },
-              {
-                emoji: "⏳",
-                title: "Auto-Expiry",
-                desc: "Your notes vanish in 30 days.",
-              },
-              {
-                emoji: "📌",
-                title: "Notice Board Style",
-                desc: "See what others are sharing too.",
-              },
-              {
-                emoji: "🌐",
-                title: "Shareable",
-                desc: "Send your note links anywhere.",
-              },
-            ].map((item, i) => (
+        <div className="container mx-auto px-6 pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0D3B66] mb-6">
+              Why Choose <span className="text-[#F4D35E]">Sticky Board?</span>
+            </h2>
+            <p className="text-2xl font-medium text-[#0D3B66]/80 max-w-2xl mx-auto">
+              Experience the freedom of anonymous sharing with our simple yet
+              powerful platform
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                key={i}
-                className="bg-[#FAF0CA] p-6 rounded-xl shadow-md"
-                initial={{ opacity: 0, y: 30 }}
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="text-center p-6 rounded-2xl bg-[#FAF0CA]/60 hover:bg-[#FAF0CA] transition-all duration-300"
               >
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#F4D35E] text-2xl mx-auto mb-4">
-                  {item.emoji}
+                <div className="w-16 h-16 mx-auto mb-4 bg-[#F4D35E] rounded-full flex items-center justify-center text-2xl">
+                  {feature.emoji}
                 </div>
-                <h3 className="text-xl font-semibold text-[#0D3B66]">
-                  {item.title}
+                <h3 className="text-2xl font-bold text-[#0D3B66] mb-3">
+                  {feature.title}
                 </h3>
-                <p className="text-[#0D3B66] mt-2 text-sm">{item.desc}</p>
+                <p className="text-[#0D3B66]/80 font-medium">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
-        </div>
+        </div>{" "}
       </section>
 
       {/* How It Works */}
@@ -153,7 +173,9 @@ export default function LandingPage() {
                 <h3 className="text-2xl font-bold text-[#0D3B66] mb-4">
                   {step.title}
                 </h3>
-                <p className="text-[#0D3B66]/80 text-lg font-medium">{step.description}</p>
+                <p className="text-[#0D3B66]/80 text-lg font-medium">
+                  {step.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -161,9 +183,9 @@ export default function LandingPage() {
       </section>
 
       {/* Thanks Section */}
-      <section className="bg-[#FAF0CA] text-center py-16">
+      <section className="bg-[#0D3B66] text-center py-16 pt-20 pb-">
         <motion.h3
-          className="text-2xl md:text-3xl font-bold text-[#0D3B66]"
+          className="text-2xl md:text-3xl font-bold text-[#FAF0CA]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -171,6 +193,13 @@ export default function LandingPage() {
         >
           Built with ❤️ for creative minds
         </motion.h3>
+        <div className="bg-[#FAF0CA] rounded-2xl p-8 border-2 border-[#F4D35E] max-w-3xl mx-auto mt-8">
+          <p className="text-xl font-medium text-[#0D3B66]/70">
+            "A place where thoughts flow freely, ideas find their voice, and
+            creativity knows no bounds. Thank you for being part of this
+            journey."
+          </p>
+        </div>
         <p className="text-[#0D3B66] mt-2">Sticky Board by Dru</p>
       </section>
 
