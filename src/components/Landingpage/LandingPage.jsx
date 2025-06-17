@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { StickyNote, Github } from "lucide-react";
 
 const steps = [
   {
@@ -52,15 +53,62 @@ const features = [
 
 export default function LandingPage() {
   return (
-    <div className="font-sans">
+    <div className="font-sans w-screen overflow-x-hidden">
+      {/* Navbar Component */}
+      <nav className="w-full  px-[25%] bg-[#faf0ca7b] border-b border-[#F4D35E] py-4 flex items-center justify-between shadow-sm fixed top-0 z-50">
+        {/* Left section: StickyNote icon and 'Sticky Board' text */}
+        <div className="flex items-center space-x-3">
+          <StickyNote className="w-6 h-6 text-[#0D3B66]" />{" "}
+          {/* StickyNote icon */}
+          <span className="text-3xl font-bold text-[#0D3B66]">
+            Sticky Board
+          </span>{" "}
+        </div>
+
+        {/* Right section: Navigation links and GitHub */}
+        <motion.div
+          className="flex items-center space-x-10 font-medium text-xl" // space-x-10 creates space between items
+          initial={{ opacity: 0, y: -10 }} // Initial animation state (invisible, slightly above)
+          animate={{ opacity: 1, y: 0 }} // Animate to visible, normal position
+          transition={{ duration: 0.5 }} // Animation duration
+        >
+          {/* Features link */}
+          <a
+            href="#features"
+            className="text-[#0D3B66] font-medium hover:underline"
+          >
+            Features
+          </a>
+          {/* About (How it works) link */}
+          <a
+            href="#how-it-works"
+            className="text-[#0D3B66] font-medium hover:underline"
+          >
+            About
+          </a>
+          {/* GitHub icon and link */}
+          <div className="flex items-center space-x-2">
+            <Github className="w-5 h-5 text-[#0D3B66]" /> {/* Github icon */}
+            <a
+              href="https://github.com/Dru-429/sticky-notes"
+              target="_blank" // Opens in a new tab
+              rel="noopener noreferrer" // Security best practice for target="_blank"
+              className="text-[#0D3B66] font-medium hover:underline"
+            >
+              GitHub
+            </a>
+          </div>
+        </motion.div>
+      </nav>
       {/* Hero Section */}
       <section className="bg-[#FAF0CA] min-h-screen flex flex-col justify-center items-center px-6 text-center">
         <motion.h1
-          className="text-4xl md:text-9xl font-bold text-clip tex bg-gradient-to-b from-[#EE964B] to-[#022f5c] mb-4"
+          className="text-4xl md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+          <StickyNote className="md:w-[110px] md:h-[115px] text-[#0D3B66]" />
           Sticky Board
         </motion.h1>
         <motion.h1
@@ -94,7 +142,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="bg-white py-20 px-6 md:px-20">
+      <section id="features" className="bg-white py-20 md:px-20">
         <div className="container mx-auto px-6 pb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -138,7 +186,7 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-[#F4D35E] md:py-24 px-6">
+      <section className="bg-[#F4D35E] md:py-24 ">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -193,6 +241,10 @@ export default function LandingPage() {
         >
           Built with ❤️ for creative minds
         </motion.h3>
+
+        <p className="text-xl text-[#]/70 mb-8">
+          <strong className="text-[#F4D35E]">Sticky Board</strong> by Dru
+        </p>
         <div className="bg-[#FAF0CA] rounded-2xl p-8 border-2 border-[#F4D35E] max-w-3xl mx-auto mt-8">
           <p className="text-xl font-medium text-[#0D3B66]/70">
             "A place where thoughts flow freely, ideas find their voice, and
