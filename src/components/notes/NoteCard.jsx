@@ -8,7 +8,7 @@ import DeleteButton from './DeleteButton';
 import { NoteContext } from '@/context/NoteContext';
 
 const NoteCard = ({ note }) => {
-    const textAreaRef = useRef<HTMLTextAreaElement>(null);
+    const textAreaRef = useRef(null);
     const cardRef = useRef(null);
     const { setSelectedNote } = useContext(NoteContext)
 
