@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧠 Sticky Board – The Internet’s Community Notice Wall
 
-## Getting Started
+Welcome to **Sticky Board** — a modern twist on the good old notice board!  
+Drop anonymous notes, share ideas, shout out cool projects, or just vibe with strangers.  
+No logins, no limits — just pure creativity in a pixel-powered playground. 🧃
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 📌 **Post Sticky Notes Instantly** — Write anything, no sign-up needed.
+- 🌍 **Open to All** — Anyone can drop notes anonymously, 24/7.
+- 🎨 **Colorful & Fun UI** — Built to feel like a digital corkboard.
+- 🗑️ **Auto-Expire in 30 Days** — Notes clean themselves up. No clutter.
+- 💬 **Leave Names or Links** — Perfect for social handles, projects, or shoutouts.
+- 📱 **Fully Responsive** — Looks great on desktop & mobile.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤹 Use Cases
 
-## Learn More
+- Project ideas or MVP shoutouts  
+- Community walls at online hackathons  
+- Public brainstorms  
+- Fun college wall for memories  
+- Random anonymous vibes  
+- Your own digital sticky graffiti 🎨
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework:** React.js + Tailwind CSS  
+- **Animations:** Framer Motion  
+- **Iconography:** Lucide React  
+- **Backend / Auth:** Appwrite  
+- **Design Style:** Clean, playful, fun-first  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧃 Sample Sticky
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> “🦄 Built with curiosity, chaos, and a hint of caffeine.”  
+> _Leave yours now 👇_
+
+---
+
+## 📸 Sneak Peek
+
+<img alt=\"Sticky Board UI\" src=\"/public/ui.jpeg\" />
+
+---
+
+## 🌐 Live Demo
+
+[🔗 Try Sticky Board](https://your-deployed-url.vercel.app) — it’s open to the world!
+
+---
+
+## 🧑‍💻 Made With
+
+Built with 💡, 🔥 and a keyboard smash by **Dru**  
+Follow me: [GitHub](https://github.com/Dru-429) · [LinkedIn](https://linkedin.com/in/your-link)
+
+---
+
+## 📝 License
+
+MIT — use it, remix it, build your own notice wall!
+
