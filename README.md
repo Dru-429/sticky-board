@@ -43,13 +43,7 @@ No logins, no limits — just pure creativity in a pixel-powered playground. �
 > “🦄 Built with curiosity, chaos, and a hint of caffeine.”  
 > _Leave yours now 👇_
 
----
-
-## 📸 Sneak Peek
-
-<img alt=\"Sticky Board UI\" src=\"/public/ui.jpeg\" />
-
----
+ ---
 
 ## 🌐 Live Demo
 
@@ -60,7 +54,7 @@ No logins, no limits — just pure creativity in a pixel-powered playground. �
 ## 🧑‍💻 Made With
 
 Built with 💡, 🔥 and a keyboard smash by **Dru**  
-Follow me: [GitHub](https://github.com/Dru-429) · [LinkedIn](https://linkedin.com/in/your-link)
+Follow me: [GitHub](https://github.com/Dru-429) · [LinkedIn](https://linkedin.com/in/dhruvsahoo)
 
 ---
 
