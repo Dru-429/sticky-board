@@ -1,6 +1,7 @@
 # 📝 Sticky Board – The Internet’s Community Notice Wall
 
 ![image](https://github.com/user-attachments/assets/3b47d3dd-ef14-4b04-88b7-407b7b337536)
+[🔗 Try Sticky Board](https://stickyboard-dru.vercel.app/)
 
 Welcome to **Sticky Board** — a modern twist on the good old notice board!  
 Drop anonymous notes, share ideas, shout out cool projects, or just vibe with strangers.  
@@ -35,7 +36,7 @@ No logins, no limits — just pure creativity in a pixel-powered playground. �
 - **Framework:** Next.js + Appwrite
 - **Animations:** Aceternity UI 
 - **Iconography:** Lucide React  
-- **Backend / Auth:** Appwrite  
+- **Backend / Auth:** Appwrite 
 - **Design Style:** Clean, playful, fun-first  
 
 ---
