@@ -33,9 +33,9 @@ No logins, no limits — just pure creativity in a pixel-powered playground. �
 
 ## 🔧 Tech Stack
 
-- **Framework:** Next.js + Appwrite
-- **Animations:** Aceternity UI 
-- **Iconography:** Lucide React  
+- **Framework:** Next.js + Appwrite + Tailwind Css
+- **Animations:** Aceternity UI, Framer Motion 
+- **Iconography:** Lucide React, Local SVG
 - **Backend / Auth:** Appwrite 
 - **Design Style:** Clean, playful, fun-first  
 
