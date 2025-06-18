@@ -51,11 +51,13 @@ const features = [
   },
 ];
 
+const backgroundImageURL = "/pattern.png"; // Path to your pattern image
+
 export default function LandingPage() {
   return (
     <div className="font-sans w-screen overflow-x-hidden">
       {/* Navbar Component */}
-      <nav className="w-full  px-[25%] bg-[#faf0ca7b] border-b border-[#F4D35E] py-4 flex items-center justify-between shadow-sm fixed top-0 z-50">
+      <nav className="w-full  px-[25%] bg-[#faf0cae2] border-b border-[#F4D35E] py-4 flex items-center justify-between shadow-sm fixed top-0 z-50">
         {/* Left section: StickyNote icon and 'Sticky Board' text */}
         <div className="flex items-center space-x-3">
           <StickyNote className="w-6 h-6 text-[#0D3B66]" />{" "}
@@ -102,7 +104,16 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-[#FAF0CA] min-h-screen flex flex-col justify-center items-center px-6 text-center">
+      <section 
+        className="bg-[#FAF0CA] min-h-screen flex flex-col justify-center items-center px-6 text-center"
+        style={{
+        backgroundColor: '#FAF0CA', 
+        backgroundImage: `url(${backgroundImageURL})`, // Apply the pattern image
+        backgroundRepeat: 'repeat', // Make the pattern repeat across the background
+        backgroundSize: 'contain', // Keep the pattern at its natural size; adjust to 'contain' or 'cover' if needed
+        backgroundAttachment: 'fixed', // Optional: Makes the background fixed while scrolling for a parallax-like effect
+      }}
+      >
         <motion.h1
           className="pb-5 text-4xl md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
           initial={{ opacity: 0, y: -40 }}
