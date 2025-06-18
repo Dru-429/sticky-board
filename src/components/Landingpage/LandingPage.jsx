@@ -58,10 +58,8 @@ export default function LandingPage() {
     <div className="font-sans w-screen overflow-x-hidden">
       {/* Navbar Component */}
       <nav className="w-full  px-[25%] bg-[#faf0cae2] border-b border-[#F4D35E] py-4 flex items-center justify-between shadow-sm fixed top-0 z-50">
-        {/* Left section: StickyNote icon and 'Sticky Board' text */}
         <div className="flex items-center space-x-3">
-          <StickyNote className="w-6 h-6 text-[#0D3B66]" />{" "}
-          {/* StickyNote icon */}
+          <StickyNote className="w-6 h-6 text-[#0D3B66]"/>{" "}
           <span className="text-3xl font-bold text-[#0D3B66]">
             Sticky Board
           </span>{" "}
@@ -69,7 +67,7 @@ export default function LandingPage() {
 
         {/* Right section: Navigation links and GitHub */}
         <motion.div
-          className="flex items-center space-x-10 font-medium text-xl" // space-x-10 creates space between items
+          className="hidden md:flex items-center space-x-10 font-medium text-xl" // space-x-10 creates space between items
           initial={{ opacity: 0, y: -10 }} // Initial animation state (invisible, slightly above)
           animate={{ opacity: 1, y: 0 }} // Animate to visible, normal position
           transition={{ duration: 0.5 }} // Animation duration
@@ -84,7 +82,7 @@ export default function LandingPage() {
           {/* About (How it works) link */}
           <a
             href="#how-it-works"
-            className="text-[#0D3B66] font-medium hover:underline"
+            className="text-[#0D3B66] font-medium hover:underline "
           >
             About
           </a>
@@ -115,12 +113,12 @@ export default function LandingPage() {
       }}
       >
         <motion.h1
-          className="pb-5 text-4xl md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
+          className="pb-5 text-5xl md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <StickyNote className="md:w-[110px] md:h-[115px] text-[#0D3B66]" />
+          <StickyNote className="w-[110px] h-[115px] text-[#0D3B66]" />
           Sticky Board
         </motion.h1>
         <motion.h1
@@ -198,7 +196,7 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="bg-[#F4D35E] md:py-24 ">
+      <section id="how-it-works" className="bg-[#F4D35E] py-24 ">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -252,7 +250,7 @@ export default function LandingPage() {
       </section>
 
       {/* Thanks Section */}
-      <section className="bg-[#0D3B66] text-center py-16 pt-20 pb-">
+      <section className="bg-[#0D3B66] text-center px-10 md:px-0 py-16 pt-20 pb-">
         <motion.h3
           className="text-2xl md:text-3xl font-bold text-[#FAF0CA]"
           initial={{ opacity: 0, y: 20 }}
