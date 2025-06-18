@@ -124,7 +124,7 @@ export default function LandingPage() {
         }}
       >
         <motion.h1
-          className="pb-5 text-5xl md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
+          className="pb-5 text-5xl tracking-tight md:tracking-normal md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -133,7 +133,7 @@ export default function LandingPage() {
           Sticky Board
         </motion.h1>
         <motion.h1
-          className="text-4xl md:text-6xl font-bold text-[#0D3B66]"
+          className="text-3xl md:text-6xl font-bold text-[#0D3B66]"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
