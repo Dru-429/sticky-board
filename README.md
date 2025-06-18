@@ -49,7 +49,7 @@ No logins, no limits — just pure creativity in a pixel-powered playground. �
 
 ## 🌐 Live Demo
 
-[🔗 Try Sticky Board](https://your-deployed-url.vercel.app) — it’s open to the world!
+[🔗 Try Sticky Board](https://stickyboard-dru.vercel.app/) — it’s open to the world!
 
 ---
 
