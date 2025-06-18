@@ -40,13 +40,6 @@ No logins, no limits — just pure creativity in a pixel-powered playground. �
 
 ---
 
-## 🧃 Sample Sticky
-
-> “🦄 Built with curiosity, chaos, and a hint of caffeine.”  
-> _Leave yours now 👇_
-
- ---
-
 ## 🌐 Live Demo
 
 [🔗 Try Sticky Board](https://stickyboard-dru.vercel.app/) — it’s open to the world!
