@@ -69,7 +69,7 @@ export default function LandingPage() {
 
         {/* Right section: Navigation links and GitHub */}
         <motion.div
-          className="flex items-center space-x-10 font-medium text-xl" // space-x-10 creates space between items
+          className="hidden md:flex items-center space-x-10 font-medium text-xl" // space-x-10 creates space between items
           initial={{ opacity: 0, y: -10 }} // Initial animation state (invisible, slightly above)
           animate={{ opacity: 1, y: 0 }} // Animate to visible, normal position
           transition={{ duration: 0.5 }} // Animation duration
@@ -198,7 +198,7 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="bg-[#F4D35E] md:py-24 ">
+      <section id="how-it-works" className="bg-[#F4D35E] py-20 md:py-24 ">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -252,7 +252,7 @@ export default function LandingPage() {
       </section>
 
       {/* Thanks Section */}
-      <section className="bg-[#0D3B66] text-center py-16 pt-20 pb-">
+      <section className="bg-[#0D3B66] text-center px-20 md:px-0 py-16 pt-20 pb-">
         <motion.h3
           className="text-2xl md:text-3xl font-bold text-[#FAF0CA]"
           initial={{ opacity: 0, y: 20 }}
@@ -280,7 +280,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0D3B66] text-white text-center py-6">
+      <footer className="bg-[#0D3B66] text-white text-center px-20 md:px-0 py-6">
         <div className="space-x-6 mb-2">
           <a
             href="https://github.com/Dru-429/sticky-notes"
