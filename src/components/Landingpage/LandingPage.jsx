@@ -1,170 +1,196 @@
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
-import { StickyNote, Github } from "lucide-react";
+"use client"
+import { motion } from "framer-motion"
+import { StickyNote, Github, Sparkles, Clock, Users, Shield } from "lucide-react"
 
 const steps = [
   {
     number: "1",
     title: "Write Your Note",
     description: "Type your thoughts, ideas, or message in our simple editor.",
+    icon: <StickyNote className="w-6 h-6" />,
   },
   {
     number: "2",
     title: "Post Anonymously",
-    description:
-      "Share your note with the community without revealing your identity.",
+    description: "Share your note with the community without revealing your identity.",
+    icon: <Shield className="w-6 h-6" />,
   },
   {
     number: "3",
     title: "Watch It Live",
-    description:
-      "Your note joins the board and automatically expires in 30 days.",
+    description: "Your note joins the board and automatically expires in 30 days.",
+    icon: <Clock className="w-6 h-6" />,
   },
-];
+]
 
 const features = [
   {
-    emoji: "🔒",
+    icon: <Shield className="w-6 h-6" />,
     title: "Anonymous Sharing",
-    description:
-      "Post your thoughts without revealing your identity. Complete privacy guaranteed.",
+    description: "Post your thoughts without revealing your identity. Complete privacy guaranteed.",
+    color: "from-[#b8e2f2] to-[#cbeac2]",
   },
   {
-    emoji: "⏰",
+    icon: <Clock className="w-6 h-6" />,
     title: "Auto-Expire",
-    description:
-      "Notes automatically disappear after 30 days, keeping the board fresh and relevant.",
+    description: "Notes automatically disappear after 30 days, keeping the board fresh and relevant.",
+    color: "from-[#f8c7e8] to-[#fff1b8]",
   },
   {
-    emoji: "🎨",
+    icon: <Sparkles className="w-6 h-6" />,
     title: "Creative Freedom",
-    description:
-      "Express yourself freely with text, emojis, and creative formatting options.",
+    description: "Express yourself freely with text, emojis, and creative formatting options.",
+    color: "from-[#cbeac2] to-[#b8e2f2]",
   },
   {
-    emoji: "🌐",
+    icon: <Users className="w-6 h-6" />,
     title: "Open Community",
-    description:
-      "Join a global community of thinkers, dreamers, and creative minds.",
+    description: "Join a global community of thinkers, dreamers, and creative minds.",
+    color: "from-[#fff1b8] to-[#f8c7e8]",
   },
-];
-
-const backgroundImageURL = "/pattern.png"; // Path to your pattern image
+]
 
 export default function LandingPage() {
   return (
-    <div className="font-sans w-screen overflow-x-hidden">
-      {/* Navbar Component */}
-      <nav className="w-full px-10 md:px-[25%] bg-[#faf0cae2] border-b border-[#F4D35E] py-4 flex items-center justify-between shadow-sm fixed top-0 z-50">
-        <div className="flex items-center space-x-3">
-          <StickyNote className="w-6 h-6 text-[#0D3B66]" />{" "}
-          <span className="text-xl md:text-3xl font-bold text-[#0D3B66]">
-            Sticky Board
-          </span>{" "}
-        </div>
-
-        {/* Right section: Navigation links and GitHub */}
-        <motion.div
-          className="hidden md:flex items-center space-x-10 font-medium text-xl" // space-x-10 creates space between items
-          initial={{ opacity: 0, y: -10 }} // Initial animation state (invisible, slightly above)
-          animate={{ opacity: 1, y: 0 }} // Animate to visible, normal position
-          transition={{ duration: 0.5 }} // Animation duration
-        >
-          {/* Features link */}
-          <a
-            href="#features"
-            className="text-[#0D3B66] font-medium hover:underline"
-          >
-            Features
-          </a>
-          {/* About (How it works) link */}
-          <a
-            href="#how-it-works"
-            className="text-[#0D3B66] font-medium hover:underline "
-          >
-            About
-          </a>
-          {/* GitHub icon and link */}
-          <div className="flex items-center space-x-2">
-            <Github className="w-5 h-5 text-[#0D3B66]" /> {/* Github icon */}
-            <a
-              href="https://github.com/Dru-429/sticky-board"
-              target="_blank" // Opens in a new tab
-              rel="noopener noreferrer" // Security best practice for target="_blank"
-              className="text-[#0D3B66] font-medium hover:underline"
+    <div className="font-sans bg-[#1a1a1a] text-white overflow-x-hidden">
+      {/* Modern Navbar */}
+      <nav className="fixed top-0 w-full z-50 bg-[#1a1a1a]/80 backdrop-blur-xl border-b border-[#cbd5e1]/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <motion.div
+              className="flex items-center space-x-3"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
             >
-              GitHub
-            </a>
-          </div>
-        </motion.div>
+              <div className="p-2 bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] rounded-lg">
+                <StickyNote className="w-5 h-5 text-[#1a1a1a]" />
+              </div>
+              <span className="text-xl font-bold bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] bg-clip-text text-transparent">
+                Sticky Board
+              </span>
+            </motion.div>
 
-        <div className="md:hidden flex items-center space-x-2">
-          <a
-            href="https://github.com/Dru-429/sticky-board"
-            target="_blank" // Opens in a new tab
-            rel="noopener noreferrer" // Security best practice for target="_blank"
-            className="text-[#0D3B66] font-medium hover:underline"
-          >
-            <Github className="w-7 h-7 text-[#0D3B66]" /> {/* Github icon */}
-          </a>
+            <motion.div
+              className="hidden md:flex items-center space-x-8"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <a href="#features" className="text-[#cbd5e1] hover:text-[#b8e2f2] transition-colors">
+                Features
+              </a>
+              <a href="#how-it-works" className="text-[#cbd5e1] hover:text-[#b8e2f2] transition-colors">
+                About
+              </a>
+              <a
+                href="https://github.com/Dru-429/sticky-board"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-[#cbd5e1] hover:text-[#b8e2f2] transition-colors"
+              >
+                <Github className="w-4 h-4" />
+                <span>GitHub</span>
+              </a>
+            </motion.div>
+
+            <div className="md:hidden">
+              <a
+                href="https://github.com/Dru-429/sticky-board"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#cbd5e1] hover:text-[#b8e2f2] transition-colors"
+              >
+                <Github className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section
-        className="bg-[#FAF0CA] min-h-screen flex flex-col justify-center items-center px-6 text-center"
-        style={{
-          backgroundColor: "#FAF0CA",
-          backgroundImage: `url(${backgroundImageURL})`, // Apply the pattern image
-          backgroundRepeat: "repeat", // Make the pattern repeat across the background
-          backgroundSize: "contain", // Keep the pattern at its natural size; adjust to 'contain' or 'cover' if needed
-          backgroundAttachment: "fixed", // Optional: Makes the background fixed while scrolling for a parallax-like effect
-        }}
-      >
-        <motion.h1
-          className="pb-5 text-5xl tracking-tight md:tracking-normal md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r to-[#EE964B] from-[#022f5c] mb-4 flex items-center justify-center gap-4"
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <StickyNote className="w-[110px] h-[115px] text-[#0D3B66]" />
-          Sticky Board
-        </motion.h1>
-        <motion.h1
-          className="text-3xl md:text-6xl font-bold text-[#0D3B66]"
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Drop your thoughts. Share your ideas.
-        </motion.h1>
+      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, #cbd5e1 1px, transparent 0)`,
+              backgroundSize: "40px 40px",
+            }}
+          />
+        </div>
 
-        <motion.p
-          className="text-lg md:text-xl text-[#0D3B66] mt-4 max-w-xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
-          Sticky Board lets you post anonymous notes that auto-expire in 30
-          days.
-        </motion.p>
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="absolute top-20 left-10 w-16 h-16 bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] rounded-lg opacity-20"
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
+          />
+          <motion.div
+            className="absolute top-40 right-20 w-12 h-12 bg-gradient-to-r from-[#f8c7e8] to-[#fff1b8] rounded-lg opacity-20"
+            animate={{ y: [0, 20, 0] }}
+            transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
+          />
+          <motion.div
+            className="absolute bottom-40 left-20 w-20 h-20 bg-gradient-to-r from-[#cbeac2] to-[#b8e2f2] rounded-lg opacity-20"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY, delay: 2 }}
+          />
+        </div>
 
-        <motion.a
-          href="/notes"
-          className="mt-8 text-lg font-bold inline-block hover:bg-[#EE964B] bg-[#F95738] text-white px-6 py-3 rounded-lg transition"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.4 }}
-        >
-          Start Posting
-        </motion.a>
+        <div className="relative z-10 text-center max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <div className="inline-flex items-center space-x-4 mb-6">
+              <div className="p-4 bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] rounded-2xl">
+                <StickyNote className="w-12 h-12 text-[#1a1a1a]" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-[#b8e2f2] via-[#cbeac2] to-[#f8c7e8] bg-clip-text text-transparent">
+                Sticky Board
+              </span>
+            </h1>
+            <h2 className="text-2xl md:text-4xl font-semibold text-[#cbd5e1] mb-6">
+              Drop your thoughts. Share your ideas.
+            </h2>
+            <p className="text-lg md:text-xl text-[#cbd5e1]/80 max-w-2xl mx-auto">
+              A modern platform for anonymous note sharing that auto-expires in 30 days. Express yourself freely in our
+              creative community.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a
+              href="/notes"
+              className="px-8 py-4 bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] text-[#1a1a1a] font-semibold rounded-xl hover:shadow-lg hover:shadow-[#b8e2f2]/25 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Posting
+            </a>
+            <a
+              href="#features"
+              className="px-8 py-4 border border-[#cbd5e1]/20 text-[#cbd5e1] font-semibold rounded-xl hover:bg-[#cbd5e1]/5 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </motion.div>
+        </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="bg-white py-20 md:px-20">
-        <div className="container mx-auto px-6 pb-20">
+      <section id="features" className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -172,12 +198,14 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0D3B66] mb-6">
-              Why Choose <span className="text-[#F4D35E]">Sticky Board?</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Why Choose{" "}
+              <span className="bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] bg-clip-text text-transparent">
+                Sticky Board?
+              </span>
             </h2>
-            <p className="text-2xl font-medium text-[#0D3B66]/80 max-w-2xl mx-auto">
-              Experience the freedom of anonymous sharing with our simple yet
-              powerful platform
+            <p className="text-xl text-[#cbd5e1]/80 max-w-3xl mx-auto">
+              Experience the freedom of anonymous sharing with our simple yet powerful platform
             </p>
           </motion.div>
 
@@ -189,26 +217,30 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 rounded-2xl bg-[#FAF0CA]/60 hover:bg-[#FAF0CA] transition-all duration-300"
+                className="group relative"
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-[#F4D35E] rounded-full flex items-center justify-center text-2xl">
-                  {feature.emoji}
+                <div
+                  className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl blur-xl"
+                  style={{
+                    background: `linear-gradient(135deg, ${feature.color.split(" ")[1]}, ${feature.color.split(" ")[3]})`,
+                  }}
+                />
+                <div className="relative p-8 bg-[#1a1a1a]/50 backdrop-blur-sm border border-[#cbd5e1]/10 rounded-2xl hover:border-[#cbd5e1]/20 transition-all duration-300">
+                  <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-xl mb-6`}>
+                    <div className="text-[#1a1a1a]">{feature.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-[#cbd5e1]/80">{feature.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-[#0D3B66] mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-[#0D3B66]/80 font-medium">
-                  {feature.description}
-                </p>
               </motion.div>
             ))}
           </div>
-        </div>{" "}
+        </div>
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="bg-[#F4D35E] py-24 ">
-        <div className="container mx-auto px-6 text-center">
+      <section id="how-it-works" className="py-24 px-6 bg-gradient-to-b from-[#1a1a1a] to-[#1a1a1a]/50">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -216,15 +248,13 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0D3B66] mb-6">
-              How It Works
-            </h2>
-            <p className="text-2xl font-semibold text-[#0D3B66] max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">How It Works</h2>
+            <p className="text-xl text-[#cbd5e1]/80 max-w-3xl mx-auto">
               Getting started is simple and takes just a few seconds
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 pb-10">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -232,84 +262,109 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="text-center bg-[#FAF0CA] p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200  shadow-[#0D3B66]/70"
+                className="relative group"
               >
-                <div className="w-16 h-16 mx-auto mb-6 bg-[#0D3B66] rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">
-                    {step.number}
-                  </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#b8e2f2]/10 to-[#cbeac2]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative p-8 bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#cbd5e1]/10 rounded-2xl hover:border-[#cbd5e1]/20 transition-all duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] rounded-full mb-6 mx-auto">
+                    <span className="text-2xl font-bold text-[#1a1a1a]">{step.number}</span>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-white mb-4 flex items-center justify-center gap-2">
+                      {step.icon}
+                      {step.title}
+                    </h3>
+                    <p className="text-[#cbd5e1]/80">{step.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-[#0D3B66] mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-[#0D3B66]/80 text-lg font-medium">
-                  {step.description}
-                </p>
               </motion.div>
             ))}
           </div>
-          <motion.a
-            href="/notes"
-            className="mt-8 inline-block bg-[#0D3B66] hover:bg-[#010202] text-white font-bold text-lg px-6 py-3 rounded-lg transition "
+
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
           >
-            Start Posting
-          </motion.a>
-        </div>{" "}
+            <a
+              href="/notes"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] text-[#1a1a1a] font-semibold rounded-xl hover:shadow-lg hover:shadow-[#b8e2f2]/25 transition-all duration-300 transform hover:scale-105"
+            >
+              <StickyNote className="w-5 h-5 mr-2" />
+              Start Posting
+            </a>
+          </motion.div>
+        </div>
       </section>
 
       {/* Thanks Section */}
-      <section className="bg-[#0D3B66] text-center px-10 md:px-0 py-16 pt-20 pb-">
-        <motion.h3
-          className="text-2xl md:text-3xl font-bold text-[#FAF0CA]"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Made with vibes ✨ & caffeine 🍵 for the idea junkies
-          <p className="text-[#f95738]">
-            Built with 💡, 🔥 and a keyboard smash by Dru
-          </p>
-        </motion.h3>
+      <section className="py-24 px-6 bg-gradient-to-b from-[#1a1a1a]/50 to-[#1a1a1a]">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Made with vibes ✨ & caffeine 🍵 for the idea junkies
+            </h3>
+            <p className="text-lg text-[#f8c7e8] font-medium">Built with 💡, 🔥 and a keyboard smash by Dru</p>
+          </motion.div>
 
-        <p className="text-xl text-[#]/70 mb-8">
-          <strong className="text-[#F4D35E]">Sticky Board</strong> by Dru
-        </p>
-        <div className="bg-[#FAF0CA] rounded-2xl p-8 border-2 border-[#F4D35E] max-w-3xl mx-auto mt-8">
-          <p className="text-xl font-medium text-[#0D3B66]/70">
-            "A place where thoughts flow freely, ideas find their voice, and
-            creativity knows no bounds. Thank you for being part of this
-            journey."
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-r from-[#1a1a1a]/80 to-[#1a1a1a]/60 backdrop-blur-sm border border-[#cbd5e1]/10 rounded-2xl p-8"
+          >
+            <p className="text-lg text-[#cbd5e1]/90 italic">
+              "A place where thoughts flow freely, ideas find their voice, and creativity knows no bounds. Thank you for
+              being part of this journey."
+            </p>
+            <p className="text-sm text-[#cbd5e1]/60 mt-4">— Sticky Board by Dru</p>
+          </motion.div>
         </div>
-        <p className="text-[#0D3B66] mt-2">Sticky Board by Dru</p>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0D3B66] text-white text-center py-6">
-        <div className="space-x-6 mb-2">
-          <a
-            href="https://github.com/Dru-429/sticky-notes"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/dhruvsahoo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            LinkedIn
-          </a>
+      <footer className="border-t border-[#cbd5e1]/10 py-12 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center space-x-3 mb-4 md:mb-0">
+              <div className="p-2 bg-gradient-to-r from-[#b8e2f2] to-[#cbeac2] rounded-lg">
+                <StickyNote className="w-4 h-4 text-[#1a1a1a]" />
+              </div>
+              <span className="font-semibold text-[#cbd5e1]">Sticky Board</span>
+            </div>
+
+            <div className="flex items-center space-x-6 mb-4 md:mb-0">
+              <a
+                href="https://github.com/Dru-429/sticky-notes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#cbd5e1]/80 hover:text-[#b8e2f2] transition-colors"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://linkedin.com/in/dhruvsahoo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#cbd5e1]/80 hover:text-[#b8e2f2] transition-colors"
+              >
+                LinkedIn
+              </a>
+            </div>
+
+            <p className="text-sm text-[#cbd5e1]/60">© 2025 Sticky Board. All rights reserved.</p>
+          </div>
         </div>
-        <p className="text-sm">© 2025 Sticky Board. All rights reserved.</p>
       </footer>
     </div>
-  );
+  )
 }
